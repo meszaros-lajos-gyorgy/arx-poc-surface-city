@@ -1,0 +1,41 @@
+{
+  "name": "arx-poc-surface-city",
+  "version": "1.0.0",
+  "description": "A test map where I brighten the sky and remove the boulders of the city",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "generate": "tsc && tsc-alias && node ./dist/src/index.js",
+    "rungame": "arx-level-generator --rungame",
+    "rungame:noclip": "arx-level-generator --rungame --noclip",
+    "dev": "npm run generate && npm run rungame",
+    "dev:noclip": "npm run generate && npm run rungame:noclip",
+    "prod": "export mode=\"production\" && npm run generate && npm run rungame",
+    "release:normal": "export outputDir=\"./output\" && export mode=\"production\" && npm run generate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meszaros-lajos-gyorgy/arx-poc-surface-city.git"
+  },
+  "keywords": [
+    "arx-fatalis"
+  ],
+  "author": "Lajos Mészáros <m_lajos@hotmail.com>",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "arx-convert": "^7.1.0",
+    "arx-level-generator": "^5.0.1",
+    "three": "^0.157.0"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.2.1",
+    "@types/node": "^20.8.9",
+    "@types/three": "^0.157.2",
+    "tsc-alias": "^1.8.8",
+    "typescript": "^5.2.2"
+  },
+  "bugs": {
+    "url": "https://github.com/meszaros-lajos-gyorgy/arx-poc-surface-city/issues"
+  },
+  "homepage": "https://github.com/meszaros-lajos-gyorgy/arx-poc-surface-city#readme"
+}
